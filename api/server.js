@@ -1,12 +1,17 @@
 const express = require("express")
 const app = express()
+const cors = require('cors')
+//
+require("dotenv").config()
 
 // Database config
 const connection = require('./DB')
 connection.once('open', () => console.log('DB Connected'))
 connection.on('error', () => console.log('Error'))
 
+// cors fixing 'Access-Control-Allow-Origin' problem 
 // Routes Config
+app.use(cors())
 app.use(express.json({
     extended: false
 })) //parse incoming request body in JSON format.

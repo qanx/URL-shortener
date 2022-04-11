@@ -32,7 +32,7 @@ function App() {
     e.preventDefault()
 
     try {
-      await axios.post("url/shorten", { longUrl: longURL.current.value })
+      await axios.post("https://btyeurl.herokuapp.com/api/url/shorten", { longUrl: longURL.current.value })
         .then((response) => {
           setResult(response.data)
         })}

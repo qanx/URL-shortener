@@ -13,7 +13,7 @@ const Url = require('../models/Url')
 // @description     Create short URL
 
 // The API base Url endpoint
-const baseUrl = 'http://localhost:5000'
+const baseUrl = 'http://btyeurl.herokuapp.com'
 
 router.post('/shorten', async (req, res) => {
     const {

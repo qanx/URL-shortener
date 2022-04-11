@@ -3,11 +3,10 @@ const mongoose = require('mongoose')
 
 
 // declare a Database string URI
-// add your DB URI Below
-const DB_URI = ''
+const databaseLink = process.env.DB_URI
 
 // establishing a database connection
-mongoose.connect(DB_URI, {
+mongoose.connect(databaseLink, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
